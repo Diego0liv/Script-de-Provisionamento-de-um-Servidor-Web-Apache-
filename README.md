@@ -1,8 +1,8 @@
 # Apex Gestor 🏗️
 
-![GitHub last commit](https.img.shields.io/github/last-commit/JorginhoVigas/apex-gestor?style=for-the-badge&logo=github)
-![GitHub language count](https.img.shields.io/github/languages/count/JorginhoVigas/apex-gestor?style=for-the-badge)
-![License](https.img.shields.io/github/license/JorginhoVigas/apex-gestor?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/JorginhoVigas/apex-gestor?style=for-the-badge&logo=github)
+![GitHub language count](https://img.shields.io/github/languages/count/JorginhoVigas/apex-gestor?style=for-the-badge)
+![License](https://img.shields.io/github/license/JorginhoVigas/apex-gestor?style=for-the-badge)
 
 > Sistema completo para gerenciamento de lojas de material de construção. O Apex Gestor foi desenvolvido para otimizar processos, controlar o estoque e facilitar a gestão financeira do seu negócio.
 
@@ -38,13 +38,12 @@ O **Apex Gestor** é uma solução de software robusta, pensada para atender às
 
 ## 🚀 Tecnologias Utilizadas
 
-Liste aqui as tecnologias, frameworks e ferramentas que vocês usarão no projeto.
-
-- **Frontend:** `(Ex: React, Vue, Angular)`
-- **Backend:** `(Ex: Node.js, Python, Java, C#)`
-- **Banco de Dados:** `(Ex: PostgreSQL, MySQL, MongoDB)`
+- **Frontend:** `HTML`, `CSS`, `Bootstrap`
+- **Backend:** `Java (Servlets & JSP)`
+- **Banco de Dados:** `PostgreSQL`
+- **Servidor de Aplicação:** `Apache Tomcat`
 - **Controle de Versão:** `Git & GitHub`
-- **Gerenciador de Pacotes:** `(Ex: NPM, Yarn, Maven)`
+- **Gerenciador de Dependências:** `Maven`
 
 ---
 
@@ -58,8 +57,8 @@ Ficou interessado em contribuir? Confira nosso guia de contribuição `CONTRIBUT
 
 | Foto | Nome | Função | GitHub | LinkedIn |
 | :--: | :----------------------------------------------------------: | :----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="URL_DA_FOTO_AQUI" width="70" height="70"> | **Diego Oliveira** | Desenvolvedor Full Stack | [GitHub](https://github.com/JorginhoVigas) | [LinkedIn](URL_DO_LINKEDIN_AQUI) |
-| <img src="URL_DA_FOTO_AQUI" width="70" height="70"> | **Jorginho Vigas** | Desenvolvedor Full Stack | [GitHub](URL_DO_GITHUB_AQUI) | [LinkedIn](URL_DO_LINKEDIN_AQUI) |
+| <img src="URL_DA_FOTO_AQUI" width="70" height="70"> | **Diego Oliveira** | Desenvolvedor Full Stack | [GitHub](URL_DO_GITHUB_AQUI) | [LinkedIn](URL_DO_LINKEDIN_AQUI) |
+| <img src="URL_DA_FOTO_AQUI" width="70" height="70"> | **Jorginho Vigas** | Desenvolvedor Full Stack | [GitHub](https://github.com/JorginhoVigas) | [LinkedIn](URL_DO_LINKEDIN_AQUI) |
 | <img src="URL_DA_FOTO_AQUI" width="70" height="70"> | **Yuri Alcantara** | Desenvolvedor Full Stack | [GitHub](URL_DO_GITHUB_AQUI) | [LinkedIn](URL_DO_LINKEDIN_AQUI) |
 
 
