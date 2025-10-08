@@ -1,0 +1,12 @@
+Model\Usuario.class
+Config\SecurityConfig.class
+Repository\MenuRepository.class
+com\Apex\Apex_Gestordemo\ApexGestordemoApplication.class
+Service\UsuarioService.class
+Repository\UsuarioRepository.class
+Model\Menu.class
+Repository\PerfilRepository.class
+Model\Perfil.class
+Service\MenuService.class
+Controller\GerenciarPerfil.class
+Service\PerfilService.class

@@ -1,0 +1,12 @@
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\com\Apex\Apex_Gestordemo\ApexGestordemoApplication.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Config\SecurityConfig.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Controller\GerenciarPerfil.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Model\Menu.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Model\Perfil.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Model\Usuario.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Repository\MenuRepository.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Repository\PerfilRepository.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Repository\UsuarioRepository.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Service\MenuService.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Service\PerfilService.java
+C:\Apex_Gestor_APP\Apex-Gestordemo\src\main\java\Service\UsuarioService.java
