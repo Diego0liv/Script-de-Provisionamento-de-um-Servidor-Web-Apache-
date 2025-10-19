@@ -1,19 +1,20 @@
 package Model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import java.time.LocalDateTime;
 import java.util.Set;
 import lombok.*;
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "Cliente", uniqueConstraints = {
+    @UniqueConstraint(columnNames = {"tipo_documento", "cpf_cnpj"})
+})
 @Data
 public class Cliente {
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private Long idCliente;
 
     @Column(name = "nome_razao", nullable = false, length = 100)
@@ -34,11 +35,11 @@ public class Cliente {
     @Column(nullable = false)
     private int status;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "Cliente_Endereco",
-            joinColumns = @JoinColumn(name = "cliente_id"),
-            inverseJoinColumns = @JoinColumn(name = "endereco_id")
+        name = "Cliente_Endereco",
+        joinColumns = @JoinColumn(name = "cliente_id"),
+        inverseJoinColumns = @JoinColumn(name = "endereco_id")
     )
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
