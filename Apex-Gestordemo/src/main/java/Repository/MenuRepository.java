@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MenuRepository extends JpaRepository<Menu, Long> {
     
-    // É só isso! O Spring Data JPA cria todos os métodos para você.
-    
 }
