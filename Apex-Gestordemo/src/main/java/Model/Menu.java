@@ -29,7 +29,7 @@ public class Menu {
     @Column(nullable = false)
     private int exibir;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "Menu_Perfil",
             joinColumns = @JoinColumn(name = "menu_id"),

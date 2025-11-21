@@ -32,4 +32,5 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "perfil_id", nullable = false)
     private Perfil perfil;
+    //classe esta ok
 }

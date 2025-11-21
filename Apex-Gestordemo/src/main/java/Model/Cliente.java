@@ -37,9 +37,9 @@ public class Cliente {
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "Cliente_Endereco",
-        joinColumns = @JoinColumn(name = "cliente_id"),
-        inverseJoinColumns = @JoinColumn(name = "endereco_id")
+            name = "Cliente_Endereco",
+            joinColumns = @JoinColumn(name = "cliente_id"),
+            inverseJoinColumns = @JoinColumn(name = "endereco_id")
     )
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

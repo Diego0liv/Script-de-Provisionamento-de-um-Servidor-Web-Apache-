@@ -27,4 +27,6 @@ public class Perfil {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<Menu> menus;
+    
+    //classe esta ok
 }

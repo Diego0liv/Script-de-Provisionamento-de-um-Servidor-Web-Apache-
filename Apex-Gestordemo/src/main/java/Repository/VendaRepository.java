@@ -11,5 +11,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VendaRepository extends JpaRepository<Venda, Long>{
     
-    List<Venda> buscarPorDataVendaPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal);
 }

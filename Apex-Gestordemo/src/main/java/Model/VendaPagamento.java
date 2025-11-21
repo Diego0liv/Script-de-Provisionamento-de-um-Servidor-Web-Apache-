@@ -13,12 +13,12 @@ public class VendaPagamento {
     private VendaPagamentoId idVendaPagamento;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("vendaId")
+    @MapsId("idVenda")
     @JoinColumn(name = "venda_id")
     private Venda venda;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("formaPagamentoId")
+    @MapsId("idFromaPg")
     @JoinColumn(name = "forma_pagamento_id")
     private FormaPagamento formaPagamento;
 
