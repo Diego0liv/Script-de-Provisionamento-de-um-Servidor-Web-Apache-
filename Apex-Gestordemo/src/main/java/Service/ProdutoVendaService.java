@@ -12,24 +12,24 @@ import java.util.Optional;
 public class ProdutoVendaService {
 
     @Autowired
-    private ProdutoVendaRepository itemVendaRepository;
+    private ProdutoVendaRepository produtoVendaRepository;
 
     public List<ProdutoVenda> listarTodos() {
-        return itemVendaRepository.findAll();
+        return produtoVendaRepository.findAll();
     }
 
-    public Optional<ItemVenda> buscarPorId(ItemVendaId id) {
-        return itemVendaRepository.findById(id);
+    public Optional<ProdutoVenda> buscarPorId(ProdutoVendaId id) {
+        return produtoVendaRepository.findById(id);
     }
 
-    public ItemVenda salvar(ItemVenda itemVenda) {
-        return itemVendaRepository.save(itemVenda);
+    public ProdutoVenda salvar(ProdutoVenda ProdutoVenda) {
+        return produtoVendaRepository.save(ProdutoVenda);
     }
 
-    public void deletar(ItemVendaId id) {
-        if (!itemVendaRepository.existsById(id)) {
+    public void deletar(ProdutoVendaId id) {
+        if (!produtoVendaRepository.existsById(id)) {
             throw new RuntimeException("Item de Venda não encontrado");
         }
-        itemVendaRepository.deleteById(id);
+        produtoVendaRepository.deleteById(id);
     }
 }

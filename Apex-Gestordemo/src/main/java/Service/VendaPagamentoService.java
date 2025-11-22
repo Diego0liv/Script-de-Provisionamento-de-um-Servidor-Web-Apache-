@@ -9,27 +9,27 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PagamentoVendaService {
+public class VendaPagamentoService {
 
     @Autowired
-    private PagamentoVendaRepository pagamentoVendaRepository;
+    private VendaPagamentoRepository vendaPagamentoRepository;
 
-    public List<PagamentoVenda> listarTodos() {
-        return pagamentoVendaRepository.findAll();
+    public List<VendaPagamento> listarTodos() {
+        return vendaPagamentoRepository.findAll();
     }
 
-    public Optional<PagamentoVenda> buscarPorId(PagamentoVendaId id) {
-        return pagamentoVendaRepository.findById(id);
+    public Optional<VendaPagamento> buscarPorId(VendaPagamentoId id) {
+        return vendaPagamentoRepository.findById(id);
     }
 
-    public PagamentoVenda salvar(PagamentoVenda pagamentoVenda) {
-        return pagamentoVendaRepository.save(pagamentoVenda);
+    public VendaPagamento salvar(VendaPagamento pagamentoVenda) {
+        return vendaPagamentoRepository.save(pagamentoVenda);
     }
 
-    public void deletar(PagamentoVendaId id) {
-        if (!pagamentoVendaRepository.existsById(id)) {
+    public void deletar(VendaPagamentoId id) {
+        if (!vendaPagamentoRepository.existsById(id)) {
             throw new RuntimeException("Pagamento de Venda não encontrado");
         }
-        pagamentoVendaRepository.deleteById(id);
+        vendaPagamentoRepository.deleteById(id);
     }
 }

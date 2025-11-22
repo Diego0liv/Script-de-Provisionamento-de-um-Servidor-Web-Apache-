@@ -1,4 +1,4 @@
-package com.apex.store.service;
+package Service;
 
 import Model.*;
 import Repository.ProdutoRepository;
@@ -42,7 +42,7 @@ public class VendaService {
         // Primeiro, salva a venda para gerar um ID
         Venda vendaSalva = vendaRepository.save(venda);
 
-        for (ItemVenda item : venda.getItens()) {
+        for (ProdutoVenda item : venda.getItens()) {
             Produto produto = produtoRepository.findById(item.getProduto().getId())
                     .orElseThrow(() -> new RuntimeException("Produto não encontrado: " + item.getProduto().getId()));
 
@@ -57,7 +57,7 @@ public class VendaService {
             valorTotal = valorTotal.add(item.getPrecoUnitario().multiply(new BigDecimal(item.getQuantidade())));
             
             item.setVenda(vendaSalva); // Associa à venda já salva
-            item.setId(new ItemVendaId(produto.getId(), vendaSalva.getId()));
+            item.setId(new ProdutoVendaId(produto.getId(), vendaSalva.getId()));
         }
 
         if (venda.getDesconto() != null) {
@@ -66,9 +66,9 @@ public class VendaService {
         vendaSalva.setValorTotal(valorTotal);
 
         if (venda.getPagamentos() != null) {
-            for (PagamentoVenda pag : venda.getPagamentos()) {
+            for (VendaPagamento pag : venda.getPagamentos()) {
                 pag.setVenda(vendaSalva); // Associa à venda já salva
-                pag.setId(new PagamentoVendaId(vendaSalva.getId(), pag.getFormaPagamento().getId()));
+                pag.setId(new VendaPagamentoId(vendaSalva.getId(), pag.getFormaPagamento().getId()));
             }
         }
         
@@ -82,7 +82,7 @@ public class VendaService {
                 .orElseThrow(() -> new RuntimeException("Venda não encontrada"));
         
         // Devolve itens ao estoque
-        for (ItemVenda item : venda.getItens()) {
+        for (ProdutoVenda item : venda.getItens()) {
             Produto produto = item.getProduto();
             produto.setQuantidadeEstoque(produto.getQuantidadeEstoque() + item.getQuantidade());
             produtoRepository.save(produto);
