@@ -1,7 +1,7 @@
-package com.apex.store.service;
+package Service;
 
-import com.apex.store.model.Endereco;
-import com.apex.store.repository.EnderecoRepository;
+import Model.Endereco;
+import Repository.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
