@@ -10,24 +10,21 @@ import java.math.BigDecimal;
 public class ProdutoVenda {
 
     @EmbeddedId
-    private ProdutoVendaId idProdutoVenda;
-
+    private ProdutoVendaId id;
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("idProduto")
+    @MapsId("produtoId")
     @JoinColumn(name = "produto_id")
     private Produto produto;
-
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("idVenda")
+    @MapsId("vendaId")
     @JoinColumn(name = "venda_id")
     private Venda venda;
-
     @Column(nullable = false)
     private int quantidade;
-
     @Column(name = "preco_unitario", nullable = false, precision = 10, scale = 2)
     private BigDecimal precoUnitario;
-
-    @Column(name = "preco_total", insertable = false, updatable = false)
+    @Column(name = "custo_unitario", nullable = false, precision = 10, scale = 2)
+    private BigDecimal custoUnitario;
+    @Column(name = "preco_total", precision = 10, scale = 2)
     private BigDecimal precoTotal;
 }

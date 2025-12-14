@@ -1,16 +1,24 @@
 package Model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.Data;
 import java.io.Serializable;
-import lombok.*;
 
 @Embeddable
 @Data
-public class ProdutoVendaId implements Serializable{
-    
+public class ProdutoVendaId implements Serializable {
+
     @Column(name = "produto_id")
-    private Long idProduto; 
-    
+    private Long produtoId;
     @Column(name = "venda_id")
-    private Long idVenda;
+    private Long vendaId;
+
+    public ProdutoVendaId() {
+    }
+
+    public ProdutoVendaId(Long produtoId, Long vendaId) {
+        this.produtoId = produtoId;
+        this.vendaId = vendaId;
+    }
 }

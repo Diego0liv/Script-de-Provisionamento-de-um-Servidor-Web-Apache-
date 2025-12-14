@@ -43,8 +43,8 @@ public class VendaService {
         Venda vendaSalva = vendaRepository.save(venda);
 
         for (ProdutoVenda item : venda.getItens()) {
-            Produto produto = produtoRepository.findById(item.getProduto().getId())
-                    .orElseThrow(() -> new RuntimeException("Produto não encontrado: " + item.getProduto().getId()));
+            Produto produto = produtoRepository.findById(item.getProduto().getIdProduto())
+                    .orElseThrow(() -> new RuntimeException("Produto não encontrado: " + item.getProduto().getIdProduto()));
 
             if (produto.getQuantidadeEstoque() < item.getQuantidade()) {
                 throw new RuntimeException("Estoque insuficiente para o produto: " + produto.getDescricao());

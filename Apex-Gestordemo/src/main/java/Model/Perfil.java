@@ -16,17 +16,12 @@ public class Perfil {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_perfil")
     private Long idPerfil;
-
     @Column(nullable = false, length = 45)
     private String nome;
-
     @Column(nullable = false)
     private int status;
-
     @ManyToMany(mappedBy = "perfis")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<Menu> menus;
-    
-    //classe esta ok
 }

@@ -4,18 +4,16 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "Categoria")
+@Table(name = "Tipo_Despesa")
 @Data
-public class Categoria {
+public class TipoDespesa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria")
-    private Long idCategoria;
-
-    @Column(length = 45)
-    private String descricao;
-
+    @Column(name = "id_tipo_despesa")
+    private Long idTipoDespesa;
+    @Column(nullable = false, length = 50)
+    private String nome;
     @Column(nullable = false)
     private int status;
 }
